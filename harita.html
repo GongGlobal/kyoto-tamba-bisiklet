@@ -10,12 +10,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Zen+Old+Mincho:wght@500&display=swap">
 <style>
 :root{
-  color-scheme:light; --bg:#E9EDE6; --surface:#F7F9F4; --raise:#FFFFFF; --ink:#16201B; --muted:#56635C; --faint:#8A968F; --line:#D1D8CF;
-  --accent:#BF3A21; --accent-soft:#F4DDD6; --indigo:#26456A; --food:#C96F24; --nature:#4C7836; --culture:#26456A; --stay:#74508A; --event:#BF3A21; --start:#2A2A2A;
+  color-scheme:light; --bg:#FFFFFF; --surface:#F6F5F3; --raise:#FFFFFF; --ink:#16201B; --muted:#56635C; --faint:#8A968F; --line:#E6E3DE;
+  --accent:#E8741E; --accent-soft:#FDEBDC; --indigo:#26456A; --food:#C96F24; --nature:#4C7836; --culture:#26456A; --stay:#74508A; --event:#E8741E; --start:#2A2A2A;
   --shadow:0 1px 2px rgba(22,32,27,.06),0 6px 20px rgba(22,32,27,.07);
   --sans:'IBM Plex Sans Condensed','Arial Narrow',Arial,sans-serif; --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace; --jp:'Zen Old Mincho','Yu Mincho','Hiragino Mincho ProN',serif;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+@media (prefers-color-scheme: never){ :root:not([data-theme="light"]){
   color-scheme:dark; --bg:#0F1412; --surface:#171E1B; --raise:#1D2521; --ink:#E3E9E4; --muted:#9AA69F; --faint:#6F7B74; --line:#2B3530;
   --accent:#E5583C; --accent-soft:#3A221C; --indigo:#8EB0DA; --food:#E08C45; --nature:#7FAE66; --culture:#8EB0DA; --stay:#B48FCB; --event:#E5583C; --start:#D8D8D8;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
@@ -255,7 +255,7 @@ prof.addEventListener('pointerdown',e=>{prof.setPointerCapture(e.pointerId);prof
 function drawOverlay(d){
   let s='';
   if(d.pois){ d.pois.forEach((p,i)=>{ s+=`<g class="hit" data-i="${i}"><circle cx="${p.x}" cy="${p.y}" r="30" fill="transparent"/><circle class="ring" cx="${p.x}" cy="${p.y}" r="28" fill="none" stroke="var(--accent)" stroke-width="5" opacity="0"/></g>`; }); }
-  s+=`<circle id="mk" r="16" cx="-100" cy="-100" fill="#fff" stroke="#BF3A21" stroke-width="6" opacity="0"/>`;
+  s+=`<circle id="mk" r="16" cx="-100" cy="-100" fill="#fff" stroke="#E8741E" stroke-width="6" opacity="0"/>`;
   ov.innerHTML=s;
 }
 function focusPoi(i){
